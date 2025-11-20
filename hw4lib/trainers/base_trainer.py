@@ -193,7 +193,7 @@ class BaseTrainer(ABC):
                 self.wandb_run = wandb.init(
                     project=self.config['training'].get('wandb_project', 'default-project'),
                     id=run_id,
-                    resume="must",
+                    resume="allow",
                     config=self.config
                 )
             else:
